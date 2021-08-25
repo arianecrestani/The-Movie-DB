@@ -10,17 +10,20 @@
     </ul>
     <br />
     <input v-model="inputValue" type="text" />
+    <Movies/>
   </div>
 </template>
 
 <script>
 import "./src/style/global.css";
 import Header from "./components/Header";
+import Movies from "./components/Movies"
 
 export default {
   name: "App",
   components: {
     Header,
+    Movies,
   },
   data: () => {
     return {
