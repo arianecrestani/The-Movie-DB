@@ -1,35 +1,36 @@
 <template>
-
   <div id="app">
-    <Header/>
+    <Header />
     <h1>Movies</h1>
     <button v-on:click="loadMovies">laden...</button>
     <ul>
       <li v-for="result in results" v-bind:key="result.id">
-        {{result.title}}.{{result.overview}}
+        {{ result.title }}.{{ result.overview }}
       </li>
     </ul>
+    <br />
+    <input v-model="inputValue" type="text" />
   </div>
 </template>
 
 <script>
 import "./src/style/global.css";
-import Header from './components/Header'
+import Header from "./components/Header";
+
 export default {
   name: "App",
   components: {
-  Header
-},
+    Header,
+  },
   data: () => {
     return {
       results: [],
+      inputValue: '',
     };
   },
   methods: {
     async loadMovies() {
-      const query = "lord of the rings";
-      let apiUrl =
-        `https://api.themoviedb.org/3/search/movie?language=en-US&query=${query}&page=1&api_key=af4c11d1c7c756c2429ca0c3cf65c08c`;
+      let apiUrl = `https://api.themoviedb.org/3/search/movie?language=en-US&query=${this.inputValue}&page=1&api_key=af4c11d1c7c756c2429ca0c3cf65c08c`;
       try {
         let response = await this.axios.get(apiUrl);
         console.log(response.data.results);
