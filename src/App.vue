@@ -1,11 +1,12 @@
 <template>
+
   <div id="app">
-    <!-- <Header /> -->
+    <Header/>
     <h1>Movies</h1>
     <button v-on:click="loadMovies">laden...</button>
     <ul>
       <li v-for="result in results" v-bind:key="result.id">
-        {{result.title}}
+        {{result.title}}.{{result.overview}}
       </li>
     </ul>
   </div>
@@ -13,10 +14,12 @@
 
 <script>
 import "./src/style/global.css";
-
-// import Header from './components/Header';
+import Header from './components/Header'
 export default {
   name: "App",
+  components: {
+  Header
+},
   data: () => {
     return {
       results: [],
@@ -37,8 +40,4 @@ export default {
     },
   },
 };
-
-// components: {
-//   Header
-// }
 </script>
