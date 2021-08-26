@@ -1,6 +1,6 @@
 <template>
-  <li :id= "{'title' :movieTitle.title}">
-      {{movieTitle.original_title}}
+  <li :class= "{'title' :movie.title}">
+      {{movie.original_title}}.{{movie.original_title}}
   </li>
 
   
@@ -10,8 +10,8 @@
 
 export default {
     props: {
-        movieTitle:Object,
-    },
+        movie:Object
+    }
     
    
 };

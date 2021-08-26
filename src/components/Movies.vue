@@ -1,5 +1,6 @@
 <template>
   <ul>
+     <h2><slot>Movie List</slot></h2>
     <MoviesItem
       v-for="result in element"
       v-bind:key="result.id"

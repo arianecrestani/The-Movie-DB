@@ -5,7 +5,9 @@
     <button v-on:click="loadMovies">laden...</button>
     <br />
     <input v-model="inputValue" type="text" />
-    <Movies :element="results"></Movies>
+    <Movies :element="results">
+      assista
+    </Movies>
   </div>
 </template>
 
@@ -18,7 +20,7 @@ export default {
   name: "App",
   components: {
     Header,
-    Movies,
+    Movies
   },
   data: () => {
     return {
