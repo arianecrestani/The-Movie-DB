@@ -3,21 +3,16 @@
     <Header />
     <h1>Movies</h1>
     <button v-on:click="loadMovies">laden...</button>
-    <ul>
-      <li v-for="result in results" v-bind:key="result.id">
-        {{ result.title }}.{{ result.overview }}
-      </li>
-    </ul>
     <br />
     <input v-model="inputValue" type="text" />
-    <Movies/>
+    <Movies :element="results"></Movies>
   </div>
 </template>
 
 <script>
 import "./src/style/global.css";
 import Header from "./components/Header";
-import Movies from "./components/Movies"
+import Movies from "./components/Movies";
 
 export default {
   name: "App",
@@ -28,7 +23,7 @@ export default {
   data: () => {
     return {
       results: [],
-      inputValue: '',
+      inputValue: "",
     };
   },
   methods: {

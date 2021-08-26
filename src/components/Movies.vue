@@ -1,12 +1,21 @@
 <template>
- <div>
-    <h1>hello</h1>
- </div>
+  <ul>
+    <MoviesItem
+      v-for="result in element"
+      v-bind:key="result.id"
+      :movie="result"
+    ></MoviesItem>
+  </ul>
 </template>
 
 <script>
+import MoviesItem from "./MoviesItem";
 export default {
-       name:'Movies'
-    }
-
+  props: {
+    element: Array,
+  },
+  components: {
+    MoviesItem,
+  },
+};
 </script>
