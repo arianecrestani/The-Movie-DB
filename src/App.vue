@@ -6,7 +6,7 @@
     <br />
     <input v-model="inputValue" type="text" />
     <Movies :element="results">
-      assista
+      <template v-slot:choice> choice your movie!</template>
     </Movies>
   </div>
 </template>
@@ -20,7 +20,7 @@ export default {
   name: "App",
   components: {
     Header,
-    Movies
+    Movies,
   },
   data: () => {
     return {

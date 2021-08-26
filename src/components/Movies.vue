@@ -1,6 +1,8 @@
 <template>
   <ul>
-     <h2><slot>Movie List</slot></h2>
+     <p v-if="element.length == 0">
+        <slot name="choice">Movie</slot>
+     </p>
     <MoviesItem
       v-for="result in element"
       v-bind:key="result.id"
@@ -10,6 +12,7 @@
 </template>
 
 <script>
+
 import MoviesItem from "./MoviesItem";
 export default {
   props: {
@@ -17,6 +20,6 @@ export default {
   },
   components: {
     MoviesItem,
-  },
+  }
 };
 </script>
