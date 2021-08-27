@@ -6,8 +6,8 @@
     <div class= "overview">
       {{ movie.overview }}  
     </div>
-     <div class= "Poster">
-      {{ movie.poster_path}}  
+     <div class= "poster">
+       <img :src= "`https://image.tmdb.org/t/p/w185/${movie.poster_path}`"><img>
     </div>
      <div class= "date">
       {{ movie.release_date}}  
