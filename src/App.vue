@@ -6,7 +6,7 @@
     <br />
     <input v-model="inputValue" type="text" />
     <Movies :element="results">
-      <template v-slot:choice> choice your movie!</template>
+      <template v-slot:choice> choice the movie!</template>
     </Movies>
   </div>
 </template>
