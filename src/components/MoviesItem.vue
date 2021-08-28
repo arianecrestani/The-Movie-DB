@@ -1,19 +1,21 @@
 <template>
-  <div class= "movie">
-    <div class= "title">
-      {{ movie.title }}  
+  <div class="movie">
+    <div class="title">
+      {{ movie.title }}
     </div>
-    <div class= "overview">
-      {{ movie.overview }}  
+    <div class="overview">
+      {{ movie.overview }}
     </div>
-     <div class= "poster">
-       <img :src= "`https://image.tmdb.org/t/p/w185/${movie.poster_path}`"><img>
+    <div class="poster">
+      <img
+        :src="`https://image.tmdb.org/t/p/w185/${movie.poster_path}`"
+      /><img />
     </div>
-     <div class= "date">
-      {{ movie.release_date}}  
+    <div class="date">
+      {{ formatDate }}
     </div>
-     <div class= "nota">
-      {{ movie.vote_average}}  
+    <div class="nota">
+      {{ movie.vote_average }}
     </div>
   </div>
 </template>
@@ -23,8 +25,15 @@ export default {
   props: {
     movie: Object,
   },
+  computed: {
+    formatDate: function() {
+      const date = new Date(this.movie.release_date)
+      return date.getDate() + "/" + (1 + date.getMonth()) + "/" + date.getFullYear()
+    },
+  },
 };
 </script>
+
 <style scoped>
 .movie {
   background-color: white;
@@ -36,6 +45,6 @@ export default {
   padding: 1rem;
 }
 .overview {
-    color:blue;
+  color: blue;
 }
 </style>

@@ -1,5 +1,5 @@
 <template>
-  <header>
+  <header class="">
     <nav class="container">
       <img
         alt="logo-Imdb"
@@ -16,19 +16,5 @@ export default {
 };
 </script>
 <style scoped>
-header {
-  background-color: var(--color-background-nav);
-  height: 4em;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-#logo {
-  width: 3em;
-}
-nav {
-  display: flex;
-  justify-content: space-between;
-}
+
 </style>
