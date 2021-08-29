@@ -1,17 +1,18 @@
 <template>
-  <div id="app">
-    <Header />
+  <div class="app m-0 " >
+    <Header />  
     <h1>Movies</h1>
-    <button v-on:click="loadMovies">laden...</button>
+    <button class="bg-blue-300 p-3 text-2xl rounded-md ml-4 text-white uppercase" v-on:click="loadMovies" >laden...</button>
     <br />
-    <input v-model="inputValue" type="text" />
-    <Movies :element="results">
-      <template v-slot:choice> choice the movie!</template>
+    <input v-model="inputValue" type="text"  class="rounded-md lg:w-2/12 bg-blue-300 pl-4 "/>
+    <Movies :element="results" class="grid gap-3 sm:grid-cols-3 container mx-auto bg-red-300">
+      <template v-slot:choice> choice the movie!</template> 
     </Movies>
   </div>
 </template>
 
 <script>
+
 import Header from "./components/Header";
 import Movies from "./components/Movies";
 
@@ -56,4 +57,4 @@ export default {
   },
 };
 </script>
-<style src="./assets/tailwind.css" />
+<style src="./assets/css/tailwind.css" />

@@ -1,4 +1,5 @@
 <template>
+
   <div class="movie">
     <div class="title">
       {{ movie.title }}
@@ -34,17 +35,3 @@ export default {
 };
 </script>
 
-<style scoped>
-.movie {
-  background-color: white;
-  padding: 3rem;
-  margin: 2rem;
-}
-.title {
-  color: brown;
-  padding: 1rem;
-}
-.overview {
-  color: blue;
-}
-</style>

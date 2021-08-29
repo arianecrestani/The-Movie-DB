@@ -6,8 +6,9 @@
     <MoviesItem
       v-for="result in element"
       v-bind:key="result.id"
-      :movie="result"
-    ></MoviesItem>
+      :movie="result"  >
+      </MoviesItem>
+
   </ul>
 </template>
 
