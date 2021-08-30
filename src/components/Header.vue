@@ -16,7 +16,7 @@ export default {
 
 <style scoped>
 .logo{
-
-
+  width: 4rem;
 }
+
 </style>

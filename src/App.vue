@@ -1,5 +1,5 @@
 <template>
-  <div class="app m-0 " >
+  <div class="app m-0 bg-blue-300 p-0" >
     <Header />  
     <h1>Movies</h1>
     <button class="bg-blue-300 p-3 text-2xl rounded-md ml-4 text-white uppercase" v-on:click="loadMovies" >laden...</button>
