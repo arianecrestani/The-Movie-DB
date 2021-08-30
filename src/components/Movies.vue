@@ -1,14 +1,10 @@
 <template>
   <ul>
-     <p v-if="element.length == 0">
-        <slot name="choice">Movie</slot>
-     </p>
     <MoviesItem
       v-for="result in element"
       v-bind:key="result.id"
-      :movie="result"  >
+      :movie="result" >
       </MoviesItem>
-
   </ul>
 </template>
 

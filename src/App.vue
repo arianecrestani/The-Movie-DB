@@ -4,9 +4,15 @@
     <h1>Movies</h1>
     <button class="bg-blue-300 p-3 text-2xl rounded-md ml-4 text-white uppercase" v-on:click="loadMovies" >laden...</button>
     <br />
-    <input v-model="inputValue" type="text"  class="rounded-md lg:w-2/12 bg-blue-300 pl-4 "/>
+    <input v-model="inputValue" type="text"  class="rounded-md lg:w-2/12 bg-yellow-300 pl-4 "/>
+      <p v-if="inputValue.length == 0">
+        Hey choice the Movie
+      </p>
+    <br/>
+    <br/>
+    <br/>
     <Movies :element="results" class="grid gap-3 sm:grid-cols-3 container mx-auto bg-red-300">
-      <template v-slot:choice> choice the movie!</template> 
+     <br/>
     </Movies>
   </div>
 </template>
