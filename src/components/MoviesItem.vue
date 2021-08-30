@@ -9,7 +9,7 @@
     <div><img :src="posterPath" /></div>
 
     <div v-if="formatDate === 'NaN/NaN/NaN'" class="date">
-      No result to show
+      No results to show
     </div>
     <div v-else>{{ formatDate }}</div>
     <div
