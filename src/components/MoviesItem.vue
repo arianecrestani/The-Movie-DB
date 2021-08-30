@@ -1,12 +1,13 @@
 <template>
-  <div class="movie">
+  <div class="movie flex-column w-100 justify-center text-xl font-extrabold">
     <div class="title">
       {{ movie.title }}
     </div>
     <div class="overview">
-      {{ movie.overview }}
+      <button v-on:click="loadOverview">click me</button>
+      <div v-show="showOverview">{{ movie.overview }}</div>
     </div>
-    <div><img :src="posterPath" /></div>
+    <div class=""><img :src="posterPath" /></div>
 
     <div v-if="formatDate === 'NaN/NaN/NaN'" class="date">
       No results to show
@@ -32,6 +33,11 @@ export default {
   props: {
     movie: Object,
   },
+  data: () => {
+    return {
+      showOverview: false,
+    };
+  },
   computed: {
     posterPath: function() {
       if (this.movie.poster_path === null) {
@@ -45,6 +51,15 @@ export default {
       return (
         date.getDate() + "/" + (1 + date.getMonth()) + "/" + date.getFullYear()
       );
+    },
+  },
+  methods: {
+    loadOverview() {
+      if (this.showOverview === true) {
+        this.showOverview = false;
+      } else {
+        this.showOverview = true;
+      }
     },
   },
 };
