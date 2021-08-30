@@ -6,20 +6,24 @@
     <div class="overview">
       {{ movie.overview }}
     </div>
-    <div><img :src="posterPath" />;</div>
+    <div><img :src="posterPath" /></div>
 
-    <div class="date">
-      {{ formatDate }}
+    <div v-if="formatDate === 'NaN/NaN/NaN'" class="date">
+      No result to show
     </div>
-    <div class="bg-red-400 p-3 rounded-md border-radius-2"  v-if="movie.vote_average >= 8">
-      {{ movie.vote_average }} 
+    <div v-else>{{ formatDate }}</div>
+    <div
+      class="bg-red-400 p-3 rounded-md border-radius-2"
+      v-if="movie.vote_average >= 8"
+    >
+      {{ movie.vote_average }}
     </div>
     <div v-else-if="movie.vote_average === 0">
-      No results
+      No results to show
     </div>
     <div v-else>
       {{ movie.vote_average }}
-      </div>
+    </div>
   </div>
 </template>
 
