@@ -2,24 +2,20 @@
   <div id="app">
     <Header />
     <div class="">
-      <div class="Wrapper">
+      <div class="Wrapper flex flex-wrap justify-center py-8 space-x-2">
         <button
-          class="bg-blue-300 p-5 text-2xl rounded-md ml-4 text-white uppercase"
+          class="bg-blue-100 p-5 text-2xl rounded-md ml-4 text-white uppercase"
           v-on:click="loadMovies"
         >
-          laden...
+          Surch...
         </button>
         <br />
         <input
           v-model="inputValue"
           type="text"
-          class="rounded-md bg-purple-300 "
-        />
-        <p v-if="inputValue.length == 0">
-          Hey choose the Movie
-        </p>
+          class="rounded-md w-2/4 outline-none bg-gray-200"
+          placeholder="Hey choose the Movie"/>
       </div>
-
       <Movies
         :element="results"
         class=" grid gap-10 sm:grid-cols-3 w-full flex-wrap justify-center py-12 p-10 "
@@ -75,8 +71,3 @@ export default {
   },
 };
 </script>
-<style scoped>
-.Wrapper {
-  @apply flex flex-wrap justify-center py-8 space-x-2;
-}
-</style>
