@@ -8,13 +8,14 @@
       {{ movie.title }}
     </div>
     <div class="overview">
-      <button v-on:click="loadOverview">Overview</button>
+      <button v-on:click="loadOverview" class="underline text-sm hover:text-gray-400">overview</button>
       <div class="text-sl" v-show="showOverview">{{ movie.overview }}</div>
     </div>
     <div v-if="formatDate === 'NaN/NaN/NaN'" class="date">
       No results to show
     </div>
-    <div v-else>{{ formatDate }}</div>
+    <div class=" text-sm text-gray-400" v-else>{{ formatDate }}</div>
+
     <div class="nota" >
       <div
         class="text-red-700"
