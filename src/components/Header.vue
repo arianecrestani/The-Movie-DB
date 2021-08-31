@@ -1,11 +1,11 @@
 <template>
-  <header class="">
+    <div class="head bg-gray-400">
       <img
         alt="logo-Imdb"
-        class="logo"
+        class="logo w-20"
         src="https://www.themoviedb.org/assets/2/v4/logos/v2/blue_square_2-d537fb228cf3ded904ef09b136fe3fec72548ebc1fea3fbbd1ad9e36364db38b.svg"
       /><img />
-  </header>
+      </div>
 </template>
 
 <script>
@@ -15,8 +15,6 @@ export default {
 </script>
 
 <style scoped>
-.logo{
-  width: 4rem;
-}
+
 
 </style>

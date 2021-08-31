@@ -1,11 +1,11 @@
 <template>
-  <div class="movie flex-column w-100 justify-center text-xl font-extrabold">
-    <div class="title">
+  <div class="movie flex-column w-100 justify-center text-sl">
+    <div class="title text-xl">
       {{ movie.title }}
     </div>
     <div class="overview">
-      <button v-on:click="loadOverview">click me</button>
-      <div v-show="showOverview">{{ movie.overview }}</div>
+      <button v-on:click="loadOverview">Overview</button>
+      <div class="text-sl" v-show="showOverview">{{ movie.overview }}</div>
     </div>
     <div class=""><img :src="posterPath" /></div>
 

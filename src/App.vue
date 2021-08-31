@@ -1,24 +1,36 @@
 <template>
-  <div class="app m-0 box-border md:box-content p-0" >
-    <Header />  
-    <h1>Movies</h1>
-    <button class="bg-blue-300 p-3 text-2xl rounded-md ml-4 text-white uppercase" v-on:click="loadMovies" >laden...</button>
-    <br />
-    <input v-model="inputValue" type="text"  class="rounded-md lg:w-2/12 bg-yellow-300 pl-4 "/>
+  <div id="app">
+    <Header />
+    <div class="Wrapper">
+      <button
+        class="bg-blue-300 p-3 text-2xl rounded-md ml-4 text-white uppercase"
+        v-on:click="loadMovies"
+      >
+        laden...
+      </button>
+      <br />
+      <input
+        v-model="inputValue"
+        type="text"
+        class="rounded-md lg:w-2/12 bg-yellow-300 pl-4 "
+      />
       <p v-if="inputValue.length == 0">
-        Hey choice the Movie
+        Hey choose the Movie
       </p>
-    <br/>
-    <br/>
-    <br/>
-    <Movies :element="results" class=" grid gap-3 sm:grid-cols-3 container mx-auto bg-red-300 justify-center" >
-     <br/>
-    </Movies>
+      <br />
+      <br />
+      <br />
+      <Movies
+        :element="results"
+        class=" grid gap-5 sm:grid-cols-3 container mx-auto bg-red-300 justify-center"
+      >
+        <br />
+      </Movies>
+    </div>
   </div>
 </template>
-
 <script>
-
+import "./index.css";
 import Header from "./components/Header";
 import Movies from "./components/Movies";
 
@@ -59,8 +71,12 @@ export default {
   mounted() {
     this.$nextTick(() => {
       this.loadMovieDiscover();
-    })
+    });
   },
 };
 </script>
-<style src="./assets/css/tailwind.css" />
+<style scoped>
+.Wrapper {
+  @apply flex flex-wrap justify-center p-2;
+}
+</style>
