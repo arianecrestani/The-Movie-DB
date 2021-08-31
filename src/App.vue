@@ -2,11 +2,11 @@
   <div id="app">
     <Header />
     <div class="">
-      <div class="Wrapper flex flex-wrap justify-center py-3 space-x-2">
+      <div class="Wrapper flex flex-wrap justify-center py-10 space-x-3">
           <input
           v-model="inputValue"
           type="text"
-          class="rounded-md w-2/4 outline-none bg-gray-200"
+          class="rounded-md w-2/4 outline-none bg-gray-200 p-3"
           placeholder="Hey choose the Movie"/>
         <button
           class="bg-blue-100 p-2 text-2xl rounded-md ml-4 text-white uppercase"
@@ -19,7 +19,7 @@
       </div>
       <Movies
         :element="results"
-        class=" grid gap-10 sm:grid-cols-4 w-full flex-wrap justify-center py-12 p-10 "
+        class=" grid gap-10 sm:grid-cols-4 w-full flex-wrap justify-center py-12 pl-14  "
       >
         <br />
       </Movies>

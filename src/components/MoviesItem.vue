@@ -1,8 +1,8 @@
 <template>
-  <div class="movie flex-col  bg-gray-200 py-6 w-60 rounded-md mt-5 text-center">
+  <div class="movie flex-col  bg-gray-200 py-5 w-60 rounded-md mt-5 text-center ">
   
     <div class="flex justify-center">
-      <img class="w-auto " :src="posterPath" />
+      <img class=" " :src="posterPath" />
     </div>
       <div class="title text-xl">
       {{ movie.title }}
