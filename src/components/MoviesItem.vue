@@ -1,5 +1,5 @@
 <template>
-  <div class="movie flex-column w-100 justify-center text-sl">
+  <div class="movie">
     <div class="title text-xl">
       {{ movie.title }}
     </div>
@@ -7,7 +7,7 @@
       <button v-on:click="loadOverview">Overview</button>
       <div class="text-sl" v-show="showOverview">{{ movie.overview }}</div>
     </div>
-    <div class=""><img :src="posterPath" /></div>
+    <div class="w-52 bg-purple-300 p-3 rounded-md mt-4"><img :src="posterPath" /></div>
 
     <div v-if="formatDate === 'NaN/NaN/NaN'" class="date">
       No results to show
