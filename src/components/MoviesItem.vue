@@ -1,23 +1,23 @@
 <template>
-  <div class="movie flex-col  bg-gray-200 p-8 rounded-md mt-6 text-center">
-    <div class="title text-xl">
+  <div class="movie flex-col  bg-gray-200 py-6 w-60 rounded-md mt-5 text-center">
+  
+    <div class="flex justify-center">
+      <img class="w-auto " :src="posterPath" />
+    </div>
+      <div class="title text-xl">
       {{ movie.title }}
     </div>
     <div class="overview">
       <button v-on:click="loadOverview">Overview</button>
       <div class="text-sl" v-show="showOverview">{{ movie.overview }}</div>
     </div>
-    <div class="flex justify-center">
-      <img class="w-auto " :src="posterPath" />
-    </div>
-
     <div v-if="formatDate === 'NaN/NaN/NaN'" class="date">
       No results to show
     </div>
     <div v-else>{{ formatDate }}</div>
     <div class="nota" >
       <div
-        class="text-purple-300"
+        class="text-red-700"
         v-if="movie.vote_average >= 8"
       >
         {{ movie.vote_average }}
