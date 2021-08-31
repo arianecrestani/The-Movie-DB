@@ -2,7 +2,7 @@
   <div id="app">
     <Header />
     <div class="">
-      <div class="Wrapper flex flex-wrap justify-center py-10 space-x-3">
+      <div class="Wrapper flex flex-wrap justify-center py-12 space-x-3">
           <input
           v-model="inputValue"
           type="text"
@@ -19,7 +19,7 @@
       </div>
       <Movies
         :element="results"
-        class=" grid gap-10 sm:grid-cols-4 w-full flex-wrap justify-center py-12 pl-14  "
+        class=" grid gap-7 sm:grid-cols-4 w-full flex-wrap justify-center py-12 pl-14  "
       >
         <br />
       </Movies>
