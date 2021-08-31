@@ -1,5 +1,5 @@
 <template>
-  <div class="movie">
+  <div class="movie flex-col  bg-gray-200 p-8 rounded-md mt-6 text-center">
     <div class="title text-xl">
       {{ movie.title }}
     </div>
@@ -7,23 +7,27 @@
       <button v-on:click="loadOverview">Overview</button>
       <div class="text-sl" v-show="showOverview">{{ movie.overview }}</div>
     </div>
-    <div class="w-52 bg-purple-300 p-3 rounded-md mt-4"><img :src="posterPath" /></div>
+    <div class="flex justify-center">
+      <img class="w-auto " :src="posterPath" />
+    </div>
 
     <div v-if="formatDate === 'NaN/NaN/NaN'" class="date">
       No results to show
     </div>
     <div v-else>{{ formatDate }}</div>
-    <div
-      class="bg-red-400 p-3 rounded-md border-radius-2"
-      v-if="movie.vote_average >= 8"
-    >
-      {{ movie.vote_average }}
-    </div>
-    <div v-else-if="movie.vote_average === 0">
-      No results to show
-    </div>
-    <div v-else>
-      {{ movie.vote_average }}
+    <div class="nota" >
+      <div
+        class="text-purple-300"
+        v-if="movie.vote_average >= 8"
+      >
+        {{ movie.vote_average }}
+      </div>
+      <div v-else-if="movie.vote_average === 0">
+        No results to show
+      </div>
+      <div v-else>
+        {{ movie.vote_average }}
+      </div>
     </div>
   </div>
 </template>

@@ -1,32 +1,32 @@
 <template>
   <div id="app">
     <Header />
-    <div class="Wrapper">
-      <button
-        class="bg-blue-300 p-5 text-2xl rounded-md ml-4 text-white uppercase"
-        v-on:click="loadMovies"
+    <div class="">
+      <div class="Wrapper">
+        <button
+          class="bg-blue-300 p-5 text-2xl rounded-md ml-4 text-white uppercase"
+          v-on:click="loadMovies"
+        >
+          laden...
+        </button>
+        <br />
+        <input
+          v-model="inputValue"
+          type="text"
+          class="rounded-md bg-purple-300 "
+        />
+        <p v-if="inputValue.length == 0">
+          Hey choose the Movie
+        </p>
+      </div>
+
+      <Movies
+        :element="results"
+        class=" grid gap-10 sm:grid-cols-3 w-full flex-wrap justify-center py-12 p-10 "
       >
-        laden...
-      </button>
-      <br />
-      <input
-        v-model="inputValue"
-        type="text"
-        class="rounded-md lg:w-2/12 bg-yellow-300 pl-6 "
-      />
-      <p v-if="inputValue.length == 0">
-        Hey choose the Movie
-      </p>
+        <br />
+      </Movies>
     </div>
-    <br />
-    <br />
-    <br />
-    <Movies
-      :element="results"
-      class=" grid sm:grid-cols-3 w-full flex-wrap justify-center py-12 pr-0 pl-40"
-    >
-      <br />
-    </Movies>
   </div>
 </template>
 <script>
