@@ -3,18 +3,19 @@
     <Header />
     <div class="">
       <div class="Wrapper flex flex-wrap justify-center py-8 space-x-2">
-        <button
-          class="bg-blue-100 p-5 text-2xl rounded-md ml-4 text-white uppercase"
-          v-on:click="loadMovies"
-        >
-          Surch...
-        </button>
-        <br />
-        <input
+          <input
           v-model="inputValue"
           type="text"
           class="rounded-md w-2/4 outline-none bg-gray-200"
           placeholder="Hey choose the Movie"/>
+        <button
+          class="bg-blue-100 p-2 text-2xl rounded-md ml-4 text-white uppercase"
+          v-on:click="loadMovies"
+        >
+          Search
+        </button>
+        <br />
+      
       </div>
       <Movies
         :element="results"
