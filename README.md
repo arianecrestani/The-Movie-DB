@@ -1,6 +1,6 @@
 # The Movie db
 ## Preview
-![flwochart](./layouts/Themoviedb.png)
+
 
 
 
