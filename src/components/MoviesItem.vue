@@ -14,9 +14,9 @@
       <div class="text-sm text-gray-400  " v-else>{{ formatDate }}</div>
 
       <div
-        class=" flex justify-center nota text-gray-600 bg-gray-300 w-10 rounded-full "
+        class=" flex justify-center nota font-semibold text-gray-600 bg-gray-300 w-10 rounded-full "
       >
-        <div class="text-red-700 " v-if="movie.vote_average >= 8">
+        <div class="text-green-500 " v-if="movie.vote_average >= 8">
           {{ movie.vote_average }}
         </div>
         <div v-else-if="movie.vote_average === 0">No note results</div>
