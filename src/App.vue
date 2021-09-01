@@ -19,7 +19,7 @@
       </div>
       <Movies
         :element="results"
-        class=" gap-3 w-full flex flex-wrap justify-center py-12 mx-4 "
+        class=" gap-3 w-full flex flex-wrap justify-center py-12 mx-3 "
       >
         <br />
       </Movies>
