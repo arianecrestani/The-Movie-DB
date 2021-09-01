@@ -1,22 +1,22 @@
 <template>
   <ul>
-    <MoviesItem
+    <MoviesDescription
       v-for="result in element"
       v-bind:key="result.id"
       :movie="result" >
-      </MoviesItem>
+      </MoviesDescription>
   </ul>
 </template>
 
 <script>
 
-import MoviesItem from "./MoviesItem";
+import MoviesDescription from "./MoviesDescription";
 export default {
   props: {
     element: Array,
   },
   components: {
-    MoviesItem,
+    MoviesDescription,
   }
 };
 </script>

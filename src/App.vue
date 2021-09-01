@@ -17,25 +17,25 @@
         <br />
       
       </div>
-      <Movies
+      <Movie
         :element="results"
         class=" gap-3 w-full flex flex-wrap justify-center py-12 mx-3 "
       >
         <br />
-      </Movies>
+      </Movie>
     </div>
   </div>
 </template>
 <script>
 import "./index.css";
 import Header from "./components/Header";
-import Movies from "./components/Movies";
+import Movie from "./components/Movie";
 
 export default {
   name: "App",
   components: {
     Header,
-    Movies,
+    Movie,
   },
   data: () => {
     return {
