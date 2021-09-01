@@ -1,6 +1,8 @@
 # The Movie db
 
-This project was made independently and without any starter code. It is made with VUE 2.0  and Tailwind CSS.
+This project was created with the intention of practicing. 
+It uses VUE 2.0 and Tailwind CSS.
+
 
 ## Preview
 
