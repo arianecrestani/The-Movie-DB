@@ -1,4 +1,8 @@
-# imdb--movie
+# The Movie db
+## Preview
+![flwochart](./layouts/Themoviedb.png)
+
+
 
 ## Project setup
 ```
