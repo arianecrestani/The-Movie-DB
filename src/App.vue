@@ -10,17 +10,15 @@
           placeholder="Hey choose the Movie"
         />
         <SearchHistory />
-
         <br />
-     
-      <button
-        class="flex justify-center bg-blue-100 w-2/4 p-2 text-2xl text-white uppercase"
-        v-on:click="loadMovies"
-      >
-        Search
-      </button>
+        <button
+          class="flex justify-center bg-blue-100 w-2/4 p-2 text-2xl text-white uppercase"
+          v-on:click="loadMovies"
+        >
+          Search
+        </button>
+      </div>
     </div>
- </div>
     <Movie
       :element="results"
       class=" gap-3 w-full flex flex-wrap justify-center py-12 mx-3 "
@@ -60,6 +58,8 @@ export default {
       }
     },
     async loadMovies() {
+      this.$store.dispatch('saveSearch', this.inputValue);
+
       let apiUrl = `https://api.themoviedb.org/3/search/movie?language=en-US&query=${this.inputValue}&page=1&api_key=af4c11d1c7c756c2429ca0c3cf65c08c`;
       try {
         let response = await this.axios.get(apiUrl);
