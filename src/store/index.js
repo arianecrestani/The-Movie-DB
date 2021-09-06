@@ -10,10 +10,13 @@ export default new Vuex.Store({
       ]
   },
   mutations: {
+      saveSearch(state, payload) {
+          state.searchHistory.push(payload)
+      }
   },
   actions: {
       saveSearch(context, payload) {
-          console.log(payload)
+        context.commit('saveSearch', payload)
       }
   },
   modules: {
