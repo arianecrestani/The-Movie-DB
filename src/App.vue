@@ -2,40 +2,45 @@
   <div id="app">
     <Header />
     <div class="">
-      <div class="Wrapper flex flex-wrap justify-center py-12 ">
-          <input
+      <div class="flex flex-col justify-center py-12 items-center ">
+        <input
           v-model="inputValue"
           type="text"
-          class="rounded-md w-2/4 outline-none bg-gray-200 p-3"
-          placeholder="Hey choose the Movie"/>
-        <button
-          class="bg-blue-100 p-2 text-2xl rounded-md ml-4 text-white uppercase"
-          v-on:click="loadMovies"
-        >
-          Search
-        </button>
+          class=" w-2/4 outline-none bg-gray-200 p-4"
+          placeholder="Hey choose the Movie"
+        />
+        <SearchHistory />
+
         <br />
-      
-      </div>
-      <Movie
-        :element="results"
-        class=" gap-3 w-full flex flex-wrap justify-center py-12 mx-3 "
+     
+      <button
+        class="flex justify-center bg-blue-100 w-2/4 p-2 text-2xl text-white uppercase"
+        v-on:click="loadMovies"
       >
-        <br />
-      </Movie>
+        Search
+      </button>
     </div>
+ </div>
+    <Movie
+      :element="results"
+      class=" gap-3 w-full flex flex-wrap justify-center py-12 mx-3 "
+    >
+      <br />
+    </Movie>
   </div>
 </template>
 <script>
 import "./index.css";
 import Header from "./components/Header";
 import Movie from "./components/Movie";
+import SearchHistory from "./components/SearchHistory";
 
 export default {
   name: "App",
   components: {
     Header,
     Movie,
+    SearchHistory,
   },
   data: () => {
     return {

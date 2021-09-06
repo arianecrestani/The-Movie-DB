@@ -1,5 +1,5 @@
 <template>
-    <div class="head bg-gray-100 h-20 p-2  ">
+    <div class="head bg-gray-100 h-17 p-2  ">
       <img
         alt="logo-Imdb"
         class="logo w-20 ml-24"

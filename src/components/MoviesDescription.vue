@@ -1,5 +1,5 @@
 <template>
-  <div class="movie flex-col bg-gray-100 py-5 w-60 rounded-md mt-5 text-center">
+  <div class="movie flex-col bg-gray-100 py-5 w-60 rounded-md  text-center">
     <div class="flex justify-center">
       <img class="" :src="posterPath" />
     </div>
