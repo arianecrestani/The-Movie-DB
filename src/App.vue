@@ -4,12 +4,13 @@
     <div class="">
       <div class="flex flex-col justify-center py-12 items-center ">
         <input
+          v-on:click="clickInput"
           v-model="inputValue"
           type="text"
           class=" w-2/4 outline-none bg-gray-200 p-4"
           placeholder="Hey choose the Movie"
         />
-        <SearchHistory />
+        <SearchHistory v-show="showHistory"/>
         <br />
         <button
           class="flex justify-center bg-blue-100 w-2/4 p-2 text-2xl text-white uppercase"
@@ -44,6 +45,7 @@ export default {
     return {
       results: [],
       inputValue: "",
+      showHistory: false // inicial state of search
     };
   },
   methods: {
@@ -58,7 +60,7 @@ export default {
       }
     },
     async loadMovies() {
-      this.$store.dispatch('saveSearch', this.inputValue);
+      this.$store.dispatch("saveSearch", this.inputValue);
 
       let apiUrl = `https://api.themoviedb.org/3/search/movie?language=en-US&query=${this.inputValue}&page=1&api_key=af4c11d1c7c756c2429ca0c3cf65c08c`;
       try {
@@ -68,6 +70,9 @@ export default {
       } catch (e) {
         console.error(e);
       }
+    },
+    clickInput() {
+      this.showHistory = true;
     },
   },
   mounted() {
