@@ -5,9 +5,7 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-      searchHistory: [
-          "test"
-      ]
+      searchHistory: []
   },
   mutations: {
       saveSearch(state, payload) {
