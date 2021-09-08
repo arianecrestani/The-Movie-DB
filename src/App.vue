@@ -4,6 +4,7 @@
     <div class="">
       <div class="flex flex-col justify-center py-12 items-center ">
         <input
+          
           v-on:click="clickInput"
           v-model="inputValue"
           type="text"
@@ -15,6 +16,7 @@
         <button
           class="flex justify-center bg-blue-100 w-2/4 p-2 text-2xl text-white uppercase"
           v-on:click="loadMovies"
+          @click="resetInput"
         >
           Search
         </button>
@@ -73,6 +75,9 @@ export default {
     },
     clickInput() {
       this.showHistory = true;
+    },
+    resetInput() {
+      this.inputValue = "";
     },
   },
   mounted() {
