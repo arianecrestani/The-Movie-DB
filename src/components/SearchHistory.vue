@@ -1,7 +1,7 @@
 <template>
   <div class=" bg-gray-100 w-2/4  list-none cursor-default">
     <ul v-for="(item, index) in $store.state.searchHistory" v-bind:key="index">
-      <li class="hover:bg-red-700 p-3" @click="setResult(item)" >{{ item }}</li>
+      <li class="hover:bg-green-700 p-3" @click="setResult(item)" >{{ item }}</li>
     </ul>
   </div>
 </template>

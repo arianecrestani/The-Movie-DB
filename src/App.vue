@@ -59,6 +59,8 @@ export default {
       }
     },
     async loadMovies() {
+      if(this.inputValue === "") return;
+
       this.$store.dispatch("saveSearch", this.inputValue); // save proprietie
 
       let apiUrl = `https://api.themoviedb.org/3/search/movie?language=en-US&query=${this.inputValue}&page=1&api_key=af4c11d1c7c756c2429ca0c3cf65c08c`;
