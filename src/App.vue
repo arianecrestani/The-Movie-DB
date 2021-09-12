@@ -9,7 +9,7 @@
           type="text"
           class=" w-2/4 outline-none bg-gray-200 p-4"
           placeholder="Hey choose the Movie"/>
-        <SearchHistory v-show="showHistory"/>
+        <SearchHistory v-show="showHistory" v-on:valueselected="onSearchValueSelect"/>
       
         <br />
         <button
@@ -76,6 +76,9 @@ export default {
     resetInput() {
       this.inputValue = "";
     },
+    onSearchValueSelect(item) {
+      this.inputValue = item
+    }
   },
   mounted() {
     this.$nextTick(() => {

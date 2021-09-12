@@ -1,6 +1,6 @@
 <template>
   <div class=" bg-gray-100 w-2/4  list-none cursor-default">
-    <ul v-for="item in $store.state.searchHistory" v-bind:key="item">
+    <ul v-for="(item, index) in $store.state.searchHistory" v-bind:key="index">
       <li class="hover:bg-red-700 p-3" @click="setResult(item)" >{{ item }}</li>
     </ul>
   </div>
@@ -12,7 +12,7 @@ export default {
   name: "SearchHistory",
   methods: {
     setResult (item) {
-       this.$store.dispatch("setResult", item); // save paramenter
+      this.$emit('valueselected', item)
     }
   }
 };
