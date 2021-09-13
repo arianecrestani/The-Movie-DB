@@ -1,7 +1,7 @@
 # The Movie db
 
 This project was created with the intention of practicing. 
-It uses VUE 2.0 and Tailwind CSS.
+It uses VUE 2.0, Vuex and Tailwind CSS.
 
 
 ## Preview
