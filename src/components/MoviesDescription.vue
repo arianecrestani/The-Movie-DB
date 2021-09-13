@@ -7,8 +7,7 @@
       {{ movie.title }}
     </div>
     <div class="flex flew-row justify-center space-x-5 items-baseline" >
-      <div v-if="formatDate === 'NaN/NaN/NaN'" class="date">
-        No results to show
+      <div v-if="formatDate === 'NaN/NaN/NaN'" class="date hidden">
       </div>
 
       <div class="text-sm text-gray-400  " v-else>{{ formatDate }}</div>
@@ -19,7 +18,7 @@
         <div class="text-green-500 " v-if="movie.vote_average >= 8">
           {{ movie.vote_average }}
         </div>
-        <div v-else-if="movie.vote_average === 0">No note results</div>
+        <div class="text-sm bg-gray-100" v-else-if="movie.vote_average === 0">No results</div>
         <div v-else>
           {{ movie.vote_average }}
         </div>

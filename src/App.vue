@@ -2,19 +2,19 @@
   <div id="app">
     <Header />
     <div class="">
-      <div class="flex flex-col justify-center py-12 items-center ">
+      <div class="flex flex-col justify-center py-12 items-center">
         <input
           
           v-on:click="clickInput"
           v-model="inputValue"
           type="text"
-          class=" w-2/4 outline-none bg-gray-200 p-4"
+          class=" w-2/4 outline-none bg-gray-200 p-4 rounded-md"
           placeholder="Hey choose the Movie"/>
         <SearchHistory v-show="showHistory" v-on:valueselected="onSearchValueSelect"/>
       
         <br />
         <button
-          class="flex justify-center bg-blue-100 w-2/4 p-2 text-2xl text-white uppercase"
+          class="flex justify-center bg-blue-100 w-2/4 p-2 text-2xl text-white uppercase rounded-md"
           v-on:click="loadMovies"
           @click="resetInput"
           >
