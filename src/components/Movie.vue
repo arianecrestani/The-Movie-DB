@@ -9,7 +9,6 @@
 </template>
 
 <script>
-
 import MoviesDescription from "./MoviesDescription";
 export default {
   props: {

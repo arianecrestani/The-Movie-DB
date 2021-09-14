@@ -9,12 +9,8 @@
     <div class="flex flew-row justify-center space-x-5 items-baseline" >
       <div v-if="formatDate === 'NaN/NaN/NaN'" class="date hidden">
       </div>
-
       <div class="text-sm text-gray-400  " v-else>{{ formatDate }}</div>
-
-      <div
-        class=" flex justify-center nota font-semibold text-gray-600 bg-gray-300 w-10 rounded-full "
-      >
+      <div class=" flex justify-center nota font-semibold text-gray-600 bg-gray-300 w-10 rounded-full ">
         <div class="text-green-500 " v-if="movie.vote_average >= 8">
           {{ movie.vote_average }}
         </div>
