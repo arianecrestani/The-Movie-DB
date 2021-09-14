@@ -6,7 +6,7 @@ It uses VUE 2.0, Vuex and Tailwind CSS.
 
 ## Preview
 
-![flwochart](./layouts/Themoviedb.png)
+![flwochart](./layouts/The-movie-db.png)
 
 
 ## Project setup
