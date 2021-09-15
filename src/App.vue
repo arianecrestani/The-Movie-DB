@@ -73,7 +73,11 @@ export default {
       }
     },
     clickInput() {
-      this.showHistory = true;
+    if (this.showHistory === true) {
+        this.showHistory = false;
+      } else {
+        this.showHistory = true;
+      }
     },
     resetInput() {
       this.inputValue = "";
