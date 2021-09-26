@@ -20,9 +20,7 @@
         </button>
       </div>
     </div>
-    <Movie
-      :element="results"
-      class=" gap-3 w-full flex flex-wrap justify-center py-12 mx-3 ">
+    <Movie :element="results" class=" gap-3 w-full flex flex-wrap justify-center py-12 mx-3 ">
       <br />
     </Movie>
   </div>
