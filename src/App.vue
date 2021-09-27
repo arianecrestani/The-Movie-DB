@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <Header />
+    <router-view path = "$router.key"/>
     <div class="">
       <div class="flex flex-col justify-center py-12 items-center">
         <input
