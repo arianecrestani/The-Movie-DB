@@ -1,7 +1,8 @@
 <template>
-  <div class="overview">
-    <h1>ssss</h1>
-  </div>
+   <div class="overview">
+       {{ movie.overview }}
+     <h1>hello</h1>
+    </div>
 </template>
 
 <script>
