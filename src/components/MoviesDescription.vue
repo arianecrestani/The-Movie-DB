@@ -50,14 +50,5 @@ export default {
       );
     },
   },
-  methods: {
-    loadOverview() {
-      if (this.showOverview === true) {
-        this.showOverview = false;
-      } else {
-        this.showOverview = true;
-      }
-    },
-  },
 };
 </script>
