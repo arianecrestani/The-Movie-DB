@@ -20,17 +20,8 @@
         </div>
       </div>
     </div>
-    <div class="overview">
-      <button
-        v-on:click="loadOverview"
-        class="underline text-sm hover:text-gray-400"
-      >
-        overview
-      </button>
-      <div class="text-xs px-4 py-4 text-justify" v-show="showOverview">
-        {{ movie.overview }}
-      </div>
-    </div>
+
+    <router-link to="/overview">overview</router-link>
   </div>
 </template>
 

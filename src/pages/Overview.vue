@@ -1,15 +1,11 @@
 <template>
-
+  <div class="overview">
+    <h1>ssss</h1>
+  </div>
 </template>
 
 <script>
-// @ is an alias to /src
-
-
 export default {
-  name: 'Overview',
-  components: {
-    HelloWorld
-  }
-}
+  name: "Overview",
+};
 </script>
