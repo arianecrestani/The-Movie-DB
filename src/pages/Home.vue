@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <Header />
-    <div class="">
+    <div>
       <div class="flex flex-col justify-center py-12 items-center">
         <input
           v-on:click="clickInput"
@@ -20,9 +20,7 @@
         </button>
       </div>
     </div>
-    <Movie :element="results" class=" gap-3 w-full flex flex-wrap justify-center py-12 mx-3 ">
-      <br />
-    </Movie>
+    <Movie :element="results" class="gap-3 w-full flex flex-wrap justify-center py-12 mx-3"/>
   </div>
 </template>
 
@@ -68,6 +66,7 @@ export default {
         let response = await this.axios.get(apiUrl);
         console.log(response.data.results);
         this.results = response.data.results;
+        // save results on store
       } catch (e) {
         console.error(e);
       }
