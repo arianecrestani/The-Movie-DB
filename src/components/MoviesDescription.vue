@@ -23,7 +23,9 @@
         </div>
       </div>
     </div>
-    <router-link to="/movieDetail">overview</router-link>
+    <router-link to="/movieDetail">Overview
+    <router-view></router-view>
+    </router-link>
   </div>
 </template>
 
