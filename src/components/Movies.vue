@@ -1,20 +1,20 @@
 <template>
   <ul>
-    <MoviesDescription
-      v-for="result in element"
-      v-bind:key="result.id"
-      :movies="result" />
+    <Movie
+      v-for="movie in movies"
+      v-bind:key="movie.id"
+      :movie="movie" />
   </ul>
 </template>
 
 <script>
-import MoviesDescription from "./MoviesDescription";
+import Movie from "./Movie";
 export default {
   props: {
-    element: Array,
+    movies: Array,
   },
   components: {
-    MoviesDescription,
+    Movie,
   }
 };
 </script>
