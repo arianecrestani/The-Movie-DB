@@ -20,7 +20,7 @@
         </button>
       </div>
     </div>
-    <Movie :element="results" class="gap-3 w-full flex flex-wrap justify-center py-12 mx-3"/>
+    <Movies :element="results" class="gap-3 w-full flex flex-wrap justify-center py-12 mx-3"/>
   </div>
 </template>
 
@@ -28,14 +28,14 @@
 
 import "../index.css";
 import Header from "../components/Header";
-import Movie from "../components/Movie";
+import Movies from "../components/Movies";
 import SearchHistory from "../components/SearchHistory";
 
 export default {
   name: "Home",
   components: {
     Header,
-    Movie,
+    Movies,
     SearchHistory,
   },
   data: () => {
@@ -66,13 +66,14 @@ export default {
         let response = await this.axios.get(apiUrl);
         console.log(response.data.results);
         this.results = response.data.results;
+        this.$store.dispatch("saveResults", this.results)// save proprietie results
         // save results on store
       } catch (e) {
         console.error(e);
       }
     },
     clickInput() {
-    if (this.showHistory === true) {
+      if (this.showHistory === true) {
         this.showHistory = false;
       } else {
         this.showHistory = true;

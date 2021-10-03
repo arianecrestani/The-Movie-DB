@@ -3,7 +3,7 @@
     <MoviesDescription
       v-for="result in element"
       v-bind:key="result.id"
-      :movie="result" />
+      :movies="result" />
   </ul>
 </template>
 
