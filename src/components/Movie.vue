@@ -1,33 +1,32 @@
 <template>
   <div class="movie flex-col bg-gray-100 py-5 w-60 rounded-md  text-center">
-    <div class="flex justify-center">
+  <div class="flex justify-center">
       <img class="" :src="posterPath" />
-    </div>
-    <div class="title text-sm py-2 font-semibold">
+      </div>
+  <div class="title text-sm py-2 font-semibold">
       {{ movie.title }}
     </div>
-    <div class="flex flew-row justify-center space-x-5 items-baseline">
-      <div v-if="formatDate === 'NaN/NaN/NaN'" class="date hidden"></div>
-      <div class="text-sm text-gray-400  " v-else>{{ formatDate }}</div>
-      <div
-        class=" flex justify-center nota font-semibold text-gray-600 bg-gray-300 w-10 rounded-full "
-      >
-        <div class="text-green-500 " v-if="movie.vote_average >= 8">
+  <div class="flex flew-row justify-center space-x-5 items-baseline">
+  <div v-if="formatDate === 'NaN/NaN/NaN'" class="date hidden"></div>
+  <div class="text-sm text-gray-400" v-else>{{ formatDate }}</div>
+  <div
+        class=" flex justify-center nota font-semibold text-gray-600 bg-gray-300 w-10 rounded-full ">
+  <div class="text-green-500 " v-if="movie.vote_average >= 8">
           {{ movie.vote_average }}
-        </div>
-        <div class="text-sm bg-gray-100" v-else-if="movie.vote_average === 0">
+    </div>
+  <div class="text-sm bg-gray-100" v-else-if="movie.vote_average === 0">
           No results
-        </div>
-        <div v-else>
+    </div>
+  <div v-else>
           {{ movie.vote_average }}
-        </div>
-      </div>
     </div>
-    <div class="nav">
-      <router-link :to="{ name: 'movieDetail', params: { movie: movie } }">
+    </div>
+    </div>
+  <div class="nav">
+  <router-link :to="{ name: 'movieDetail', params: { movie: movie } }">
         Overview
-      </router-link>
-    </div>
+  </router-link>
+  </div>
   </div>
 </template>
 

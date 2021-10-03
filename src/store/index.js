@@ -6,7 +6,7 @@ Vue.use(Vuex)
 export default new Vuex.Store({
   state: {
       searchHistory:[],
-      results:[]
+      movies:[]
   },
   mutations: {
       saveSearch(state, payload) {
@@ -14,7 +14,7 @@ export default new Vuex.Store({
       },
       // create results mutation
       saveResults(state, payload) {
-        state.results.push(payload)
+        state.movies.push(payload)
         console.log('hello')
       }
   },

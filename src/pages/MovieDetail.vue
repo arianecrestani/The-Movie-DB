@@ -2,7 +2,9 @@
   <div>
     <Header />
     <div>
-      <h1>{{ movie.title }}</h1>
+      <h3>{{ movie.title }}</h3>
+      <h2>{{ movie. }}</h2>
+
     </div>
 
     <!-- show Image -->
@@ -24,7 +26,8 @@ export default {
   },
   methods: {
   async loadMovie() {
-
+     const movies = this.$store.state.movies
+     return movies
       // storage
       // search movie 
       //saber qual filme irei mosntrar

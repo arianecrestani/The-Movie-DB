@@ -14,8 +14,7 @@
         <button
           class="flex justify-center bg-blue-100 w-2/4 p-2 text-2xl text-white uppercase rounded-md"
           v-on:click="loadMovies"
-          @click="resetInput"
-          >
+          @click="resetInput">
           Search
         </button>
       </div>
