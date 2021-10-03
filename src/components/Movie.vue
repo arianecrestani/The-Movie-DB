@@ -23,9 +23,9 @@
     </div>
     </div>
   <div class="nav">
-  <router-link :to="{ name: 'movieDetail', params: { movie: movie } }">
+      <router-link :to="{ name: 'movieDetail', params: { movie: movie } }">
         Overview
-  </router-link>
+      </router-link>
   </div>
   </div>
 </template>

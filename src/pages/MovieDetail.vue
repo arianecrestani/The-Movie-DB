@@ -1,12 +1,11 @@
 <template>
   <div>
     <Header />
-    <div>
+    <router-link to= "/" active-class="active">
+      <a class="bg-green-300">home</a></router-link>
+
       <h3>{{ movie.title }}</h3>
-      <h2>{{ movie. }}</h2>
-
-    </div>
-
+      <h3>{{ movie.overview}}</h3>
     <!-- show Image -->
     <!-- show title -->
     <!-- show description -->
@@ -25,18 +24,18 @@ export default {
     Header,
   },
   methods: {
-  async loadMovie() {
-     const movies = this.$store.state.movies
-     return movies
-      // storage
-      // search movie 
-      //saber qual filme irei mosntrar
-      
-    },
+  // async loadMovie() {
+  //    const movies = this.$store.state.movies
+  //     // storage
+  //     // search movie
+  //       // for, serch find,  
+  //     // movie.title
+  //     // this.movie = filqueque tu achou no array
+  //   },
   },
   data() {
     return {
-      // movie: {},
+      // movies: {}
     };
   },
   mounted() {
